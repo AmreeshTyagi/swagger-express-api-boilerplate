@@ -1,0 +1,25 @@
+{
+  "name": "swagger-express-api-boilerplate",
+  "author": "Amreesh Tyagi <tyagi.amreesh@gmail.com> <https://github.com/AmreeshTyagi>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AmreeshTyagi/swagger-express-api-boilerplate"
+  },
+  "bugs": {
+    "url": "https://github.com/AmreeshTyagi/swagger-express-api-boilerplate/issues"
+  },
+  "engines": {
+    "node": ">= 7.9",
+    "npm": ">= 4.5"
+  },
+  "main": "./src/index.js",
+  "license": "MIT",
+  "version": "0.0.1",
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}
