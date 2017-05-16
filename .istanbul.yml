@@ -1,0 +1,34 @@
+verbose: false
+instrumentation:
+  root: .
+  default-excludes: true
+  excludes: [
+    '_mocks/**',
+    'coverage/**',
+    'dist/**'
+  ]
+  variable: __coverage__
+  extensions: .js
+  es-modules: true
+  include-all-sources: true
+reporting:
+    print: summary
+    reports:
+        - lcov
+    dir: ./coverage
+    watermarks:
+        statements: [50, 80]
+        lines: [50, 80]
+        functions: [50, 80]
+        branches: [50, 80]
+check:
+    global:
+        branches: 50
+        functions: 50
+        lines: 50
+        statements: 50
+    each:
+        branches: 30
+        functions: 20
+        lines: 50
+        statements: 50

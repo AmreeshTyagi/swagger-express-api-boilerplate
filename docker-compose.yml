@@ -1,0 +1,22 @@
+
+version: "2"
+
+services:
+  swagger-express-api-boilerplate:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - /app/node_modules/
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - MONGO_URL_DEV=mongodb://mongo/swagger-express-api-boilerplate-dev
+    links:
+      - mongo
+  mongo:
+    image: "mongo"
+    ports:
+      - "27017:27017"

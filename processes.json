@@ -1,0 +1,19 @@
+{
+  "apps": [
+    {
+      "name": "swagger-express-api-boilerplate",
+      "script": "./dist",
+      "instances": 4,
+      "max_memory_restart": "150M",
+      "max_restarts": 20,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 3000
+      },
+      "env_production": {
+        "NODE_ENV": "production",
+        "PORT": 3000
+      }
+    }
+  ]
+}
